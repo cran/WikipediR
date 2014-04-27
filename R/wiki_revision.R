@@ -4,19 +4,21 @@ wiki_revision <- function(con, revisions, properties = c("content","ids","flags"
                                                          "sha1","contentmodel","comment",
                                                          "parsedcomment","tags")) {
   
-  #Format and standardise revisions and properties
-  revisions <- paste(revisions, collapse = "|")
+  #Format and standardise properties
   properties <- match.arg(arg = properties, several.ok = TRUE)
   properties <- paste(properties, collapse = "|")
   
+  #Check provided revisions against the limit
+  revisions <- LimitHandler(revisions, 50)
+  
   #Construct URL
-  revision_url <- paste(con$URL,"&rvcontentformat=text%2Fcss&action=query&prop=revisions&rvprop=",properties,"&revids=",revisions, sep = "")
+  revision_url <- paste(con$URL,"&rvcontentformat=text/x-wiki&action=query&prop=revisions&rvprop=",properties,"&revids=",revisions, sep = "")
   
   #Run
-  revision_content <- wiki_call(URL = revision_url)
+  revision_content <- wiki_call(URL = revision_url, con$CurlOpts)
   
-  #Check for issues. diff_checker works for this
-  diff_checker(revision_content)
+  #Check for invalid RevIDs
+  InvalidRevIDsHandler(revision_content)
   
   #Return
   return(revision_content)

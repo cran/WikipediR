@@ -25,7 +25,6 @@ The maximum number of categories you want to retrieve for each page
   \item{show_hidden}{
 Whether or not to include 'hidden' categories in the categories that are retrieved - these are usually associated with the maintenance of Wikipedia and its internal processes.}
 }
-
 \seealso{
 \code{\link{wiki_catpages}} for pages in a specified category
 }

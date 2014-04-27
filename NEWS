@@ -1,0 +1,34 @@
+Version 1.0.0
+------------------------------------------------------------------------------
+* First release version
+* Introduction of wiki_usercontribs, which retrieves recent contributions for a specified username
+* Bugfixes to error handling routines
+* Bugfix to problems around wiki_con, where species or commons users were unable to take advantage of CurlOpts.
+
+Version 0.7.0
+------------------------------------------------------------------------------
+
+* wiki_page now returns the DOM of the relevant page, not the wikimarkup, in line with a suggestion from Scott Chamberlain. This should be parsable by the HTML tree parser in the XML package.
+
+Version 0.6.3
+------------------------------------------------------------------------------
+
+* Standardisation and cleanup of error handlers, and the introduction of a single central LimitHandler.
+
+Version 0.6.2
+------------------------------------------------------------------------------
+
+* Bug fix from Scott Chamberlain around wiki_page, switching the content type over to x-wikitext.
+* Introduction of w_timeout as a field in the connector object; will be extended to other CURL options in time.
+
+Version 0.6.1
+------------------------------------------------------------------------------
+
+* Support for Commons and Wikispecies
+* Addition of wiki_recentchanges(), which allows a useR to query the recentchanges feed.
+
+Version 0.5.1
+------------------------------------------------------------------------------
+
+* Format for wiki_revision changed from the (unacceptable-to-API) text/css to x/wikitext.
+* Error handling improved to pass the full error explanation through to the user, in the case of API errors.

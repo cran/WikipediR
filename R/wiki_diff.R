@@ -6,23 +6,25 @@ wiki_diff <- function(con,
                                              "tags","flagged"),
                       direction = c("prev","next","cur")){
   
-  
   #Match args
   direction <- match.arg(direction)
   properties <- match.arg(properties, several.ok = TRUE)
   
-  #Save the desired properties and revisions
+  #Save the desired properties and check revisions
   properties <- paste(properties, collapse = "|")
-  revisions <- paste(revisions, collapse = "|")
-  
+  revisions <- LimitHandler(revisions, 50)
+    
   #Construct the URL
-  diff_url <- paste(con$URL,"&action=query&prop=revisions&rvprop=",properties,"&rvdiffto=",direction,"&rvcontentformat=text%2Fcss&revids=",revisions, sep = "")
+  diff_url <- paste(con$URL,"&action=query&prop=revisions&rvprop=",properties,"&rvdiffto=",direction,"&rvcontentformat=text/css&revids=",revisions, sep = "")
   
   #Retrieve the content
-  diff_content <- wiki_call(URL = diff_url)
+  diff_content <- wiki_call(URL = diff_url, con$CurlOpts)
   
-  #Check
-  diff_checker(diff_content = diff_content)
+  #Check for invalid RevIDs
+  InvalidRevIDsHandler(diff_content)
+  
+  #Check for uncached diffs
+  UncachedDiffsHandler(diff_content)
   
   #Return
   return(diff_content)
