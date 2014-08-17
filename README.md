@@ -3,8 +3,8 @@ WikipediR
 
 An R API wrapper for MediaWiki, optimised for the Wikimedia Foundation MediaWiki instances, such as Wikipedia.
 
-__Author:__ Oliver Keyes<br>
-__License:__ [MIT](http://opensource.org/licenses/MIT)<br>
+__Author:__ Oliver Keyes<br/>
+__License:__ [MIT](http://opensource.org/licenses/MIT)<br/>
 __Status:__ In development
 
 Description
@@ -16,8 +16,8 @@ It is currently in development, although the functionality present (namely diff 
 Limitations
 ======
 WikipediR currently lacks:
-* Support for querying Wikidata;
-* The majority of possible API calls;
+* Quite a few possible API calls;
+* Support for querying Wikidata, and;
 * Direct authentication, through MediaWiki or OAuth.
 
 With the exception of Wikidata (which will be handled by a different package, because the API works very differently), these issues will be solved in time. If there is a particular feature you want, open an issue here on github: I can't prioritise if I don't know what people are trying to do :).
@@ -25,8 +25,8 @@ With the exception of Wikidata (which will be handled by a different package, be
 Dependencies
 ======
 * R. Doy.
-* [httr] (http://cran.r-project.org/web/packages/httr/index.html) and its dependencies;
-* [jsonlite] (http://cran.r-project.org/web/packages/jsonlite/index.html) and its dependencies;
+* [httr] (http://cran.r-project.org/web/packages/httr/index.html) and its dependencies, and;
+* [jsonlite] (http://cran.r-project.org/web/packages/jsonlite/index.html) and its dependencies.
 
 To-Do
 ======
