@@ -1,5 +1,5 @@
 #Handles uncached diffs
-UncachedDiffsHandler <- function(parsed_response){
+handle_uncached_diffs <- function(parsed_response){
   
   #Identify names
   names <- names(unlist(parsed_response))
@@ -9,7 +9,7 @@ UncachedDiffsHandler <- function(parsed_response){
   if(uncached){
     
     #If so, warn
-    warning("This request contained ",uncached,"uncached diffs; these will not be returned", call. = FALSE)
+    warning("This request contained ",uncached," uncached diffs; these will not be returned", call. = FALSE)
     
   }
 

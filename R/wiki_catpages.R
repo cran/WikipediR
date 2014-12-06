@@ -37,7 +37,7 @@ wiki_catpages <- function(con, categories, properties = c("title","ids","sortkey
   categories <- gsub(x = categories, pattern = "^", replacement = "Category:")
   
   #Check categories against the limit
-  categories <- LimitHandler(categories, 50)
+  categories <- handle_limits(categories, 50)
   
   #Match and standardise properties
   properties <- match.arg(properties, several.ok = TRUE)
@@ -51,7 +51,7 @@ wiki_catpages <- function(con, categories, properties = c("title","ids","sortkey
   catpage_url <- paste(con$URL,"&action=query&list=categorymembers&cmtitle=",categories,"&cmprop=",properties,"&cmtype=",type, sep = "")
 
   #Query
-  catpage_response <- wiki_call(URL = catpage_url, con$CurlOpts)
+  catpage_response <- wiki_call(URL = catpage_url, con$Config)
   
   #Return
   return(catpage_response)
