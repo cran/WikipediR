@@ -1,3 +1,16 @@
+Version 1.2.0
+------------------------------------------------------------------------------
+
+NEW FEATURES
+*Random pages can now be retrieved with random_page
+*pageID based querying is available
+*Custom user
+
+DEVELOPMENT
+*Doc tweaks and some simplification of argument parsing around page_content and random_page
+*Additional unit tests
+*query() marked as exportable to allow simple third-party plugins into WikipediR
+
 Version 1.0.1
 ------------------------------------------------------------------------------
 * Roxygenised documentation, some R CHECK errors fixed.
