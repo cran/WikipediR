@@ -1,8 +1,8 @@
 Package: WikipediR
 Type: Package
 Title: A MediaWiki API Wrapper
-Version: 1.2.0
-Date: 2015-05-16
+Version: 1.3.0
+Date: 2016-01-12
 Author: Oliver Keyes
 Maintainer: Oliver Keyes <ironholds@gmail.com>
 Description: A wrapper for the MediaWiki API, aimed particularly at the
@@ -11,10 +11,12 @@ Description: A wrapper for the MediaWiki API, aimed particularly at the
     the category tree.
 License: MIT + file LICENSE
 Depends: httr, jsonlite
-Suggests: XML, testthat, knitr
+Suggests: testthat, knitr, WikidataR, pageviews
 BugReports: https://github.com/Ironholds/WikipediR/issues
+URL: https://github.com/Ironholds/WikipediR/
 VignetteBuilder: knitr
+RoxygenNote: 5.0.1
+Packaged: 2016-01-13 04:04:10 UTC; ironholds
 NeedsCompilation: no
-Packaged: 2015-05-16 19:48:07 UTC; ironholds
 Repository: CRAN
-Date/Publication: 2015-05-18 00:53:35
+Date/Publication: 2016-01-13 08:49:40
