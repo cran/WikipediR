@@ -4,10 +4,16 @@
 \alias{revision_content}
 \title{Retrieves MediaWiki revisions}
 \usage{
-revision_content(language = NULL, project = NULL, domain = NULL,
-  revisions, properties = c("content", "ids", "flags", "timestamp", "user",
-  "userid", "size", "sha1", "contentmodel", "comment", "parsedcomment", "tags"),
-  clean_response = FALSE, ...)
+revision_content(
+  language = NULL,
+  project = NULL,
+  domain = NULL,
+  revisions,
+  properties = c("content", "ids", "flags", "timestamp", "user", "userid", "size",
+    "sha1", "contentmodel", "comment", "parsedcomment", "tags"),
+  clean_response = FALSE,
+  ...
+)
 }
 \arguments{
 \item{language}{The language code of the project you wish to query,
@@ -53,4 +59,3 @@ rw_content <- revision_content(domain = "rationalwiki.org", revisions = 88616)
 \code{\link{revision_diff}} for diffs between revisions,
 and \code{\link{page_content}} for the content a specific page currently has.
 }
-

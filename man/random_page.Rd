@@ -4,9 +4,16 @@
 \alias{random_page}
 \title{Retrieve the page content of a random MediaWiki page}
 \usage{
-random_page(language = NULL, project = NULL, domain = NULL,
-  namespaces = NULL, as_wikitext = FALSE, limit = 1,
-  clean_response = FALSE, ...)
+random_page(
+  language = NULL,
+  project = NULL,
+  domain = NULL,
+  namespaces = NULL,
+  as_wikitext = FALSE,
+  limit = 1,
+  clean_response = FALSE,
+  ...
+)
 }
 \arguments{
 \item{language}{The language code of the project you wish to query,
@@ -50,4 +57,3 @@ wp_article_content <- random_page("en","wikipedia", namespaces = 0)
 \code{\link{revision_diff}} for retrieving 'diffs' between revisions,
 \code{\link{revision_content}} for retrieving the text of specified revisions.
 }
-

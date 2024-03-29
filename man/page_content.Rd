@@ -4,8 +4,16 @@
 \alias{page_content}
 \title{Retrieves MediaWiki page content}
 \usage{
-page_content(language = NULL, project = NULL, domain = NULL, page_name,
-  page_id = NULL, as_wikitext = FALSE, clean_response = FALSE, ...)
+page_content(
+  language = NULL,
+  project = NULL,
+  domain = NULL,
+  page_name,
+  page_id = NULL,
+  as_wikitext = FALSE,
+  clean_response = FALSE,
+  ...
+)
 }
 \arguments{
 \item{language}{The language code of the project you wish to query,
@@ -49,4 +57,3 @@ rw_content <- page_content(domain = "rationalwiki.org", page_name = "New Age")
 \code{\link{revision_diff}} for retrieving 'diffs' between revisions,
 \code{\link{revision_content}} for retrieving the text of specified revisions.
 }
-

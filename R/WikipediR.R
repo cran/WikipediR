@@ -5,8 +5,7 @@
 #' \href{https://CRAN.R-project.org/package=WikipediR/vignettes/WikipediR.html}{vignette}.
 #' 
 #' @seealso The \href{https://CRAN.R-project.org/package=WikipediR/vignettes/WikipediR.html}{package vignette}.
-#' @docType package
 #' @importFrom httr GET user_agent stop_for_status
 #' @importFrom utils URLencode
 #' @aliases WikipediR WikipediR-package
-NULL
+"_PACKAGE"

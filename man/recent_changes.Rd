@@ -4,11 +4,20 @@
 \alias{recent_changes}
 \title{Retrieves entries from the RecentChanges feed}
 \usage{
-recent_changes(language = NULL, project = NULL, domain = NULL,
-  properties = c("user", "userid", "comment", "parsedcomment", "flags",
-  "timestamp", "title", "ids", "sizes", "redirect", "loginfo", "tags", "sha1"),
-  type = c("edit", "external", "new", "log"), tag = NULL, dir = "newer",
-  limit = 50, top = FALSE, clean_response = FALSE, ...)
+recent_changes(
+  language = NULL,
+  project = NULL,
+  domain = NULL,
+  properties = c("user", "userid", "comment", "parsedcomment", "flags", "timestamp",
+    "title", "ids", "sizes", "redirect", "loginfo", "tags", "sha1"),
+  type = c("edit", "external", "new", "log"),
+  tag = NULL,
+  dir = "newer",
+  limit = 50,
+  top = FALSE,
+  clean_response = FALSE,
+  ...
+)
 }
 \arguments{
 \item{language}{The language code of the project you wish to query,
@@ -58,4 +67,3 @@ Set to FALSE by default.}
 wiki_recentchanges retrieves a stream of entries from Special:RecentChanges, with a variety of
 associated metadata and filtering (of both entries *and* that metadata.
 }
-

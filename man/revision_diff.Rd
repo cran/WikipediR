@@ -4,10 +4,17 @@
 \alias{revision_diff}
 \title{Generates a "diff" between a pair of revisions}
 \usage{
-revision_diff(language = NULL, project = NULL, domain = NULL, revisions,
-  properties = c("ids", "flags", "timestamp", "user", "userid", "size",
-  "sha1", "contentmodel", "comment", "parsedcomment", "tags", "flagged"),
-  direction, clean_response = FALSE, ...)
+revision_diff(
+  language = NULL,
+  project = NULL,
+  domain = NULL,
+  revisions,
+  properties = c("ids", "flags", "timestamp", "user", "userid", "size", "sha1",
+    "contentmodel", "comment", "parsedcomment", "tags", "flagged"),
+  direction,
+  clean_response = FALSE,
+  ...
+)
 }
 \arguments{
 \item{language}{The language code of the project you wish to query,
@@ -56,6 +63,7 @@ If you're going to be asking for a lot of diffs, some of which may not be cached
 sensible to retrieve the revisions themselves using \code{\link{revision_content}} and compute the
 diffs yourself.
 }
+
 \examples{
 
 #Wikimedia diff
@@ -68,4 +76,3 @@ rw_diff <- revision_diff(domain = "rationalwiki.org", revisions = 88616, directi
 \code{\link{page_content}} for retrieving the current content of a specific page, and
 \code{\link{revision_content}} for retrieving the text of specific revisions.
 }
-

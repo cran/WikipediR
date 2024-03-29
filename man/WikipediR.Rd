@@ -13,4 +13,3 @@ Wikimedia projects or any other MediaWiki instance. For more information, see th
 \seealso{
 The \href{https://CRAN.R-project.org/package=WikipediR/vignettes/WikipediR.html}{package vignette}.
 }
-

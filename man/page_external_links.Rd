@@ -4,8 +4,15 @@
 \alias{page_external_links}
 \title{Retrieve a page's links}
 \usage{
-page_external_links(language = NULL, project = NULL, domain = NULL, page,
-  protocol = NULL, clean_response = FALSE, ...)
+page_external_links(
+  language = NULL,
+  project = NULL,
+  domain = NULL,
+  page,
+  protocol = NULL,
+  clean_response = FALSE,
+  ...
+)
 }
 \arguments{
 \item{language}{The language code of the project you wish to query,
@@ -41,4 +48,3 @@ external_links <- page_external_links("en","wikipedia", page = "Aaron Halfaker")
 external_http_links <- page_external_links("en","wikipedia",
                                           page = "Aaron Halfaker", protocol = "http")
 }
-

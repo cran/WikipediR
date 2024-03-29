@@ -4,9 +4,17 @@
 \alias{page_backlinks}
 \title{Retrieve a page's backlinks}
 \usage{
-page_backlinks(language = NULL, project = NULL, domain = NULL, page,
-  limit = 50, direction = "ascending", namespaces = NULL,
-  clean_response = FALSE, ...)
+page_backlinks(
+  language = NULL,
+  project = NULL,
+  domain = NULL,
+  page,
+  limit = 50,
+  direction = "ascending",
+  namespaces = NULL,
+  clean_response = FALSE,
+  ...
+)
 }
 \arguments{
 \item{language}{The language code of the project you wish to query,
@@ -45,6 +53,7 @@ page. Output can be filtered to specific namespaces.
 you are linking to does not exist, an empty list will be returned, without
 any indication of an error.
 }
+
 \examples{
 #Backlink
 all_bls <- page_backlinks("en","wikipedia", page = "Aaron Halfaker")
@@ -52,4 +61,3 @@ all_bls <- page_backlinks("en","wikipedia", page = "Aaron Halfaker")
 #Namespace-specific backlinks
 mainspace_bls <- page_backlinks("en","wikipedia", page = "Aaron Halfaker", namespaces = 0)
 }
-

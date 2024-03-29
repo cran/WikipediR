@@ -3,17 +3,15 @@ WikipediR
 
 An R API wrapper for MediaWiki, optimised for the Wikimedia Foundation MediaWiki instances, such as Wikipedia.
 
-__Author:__ Oliver Keyes<br/>
-__License:__ [MIT](http://opensource.org/licenses/MIT)<br/>
+__Author:__ Os Keyes<br/>
+__License:__ [MIT](https://opensource.org/licenses/MIT)<br/>
 __Status:__ Stable
 
-![downloads](http://cranlogs.r-pkg.org/badges/grand-total/WikipediR)
+![downloads](https://cranlogs.r-pkg.org/badges/grand-total/WikipediR)
 
 Description
 ======
 _WikipediR_ is a wrapper around the MediaWiki API, optimised for the Wikimedia Foundation's production sites, such as Wikipedia. It is written in and for R, a statistical environment and associated programming language in heavy use by HCI researchers that, somehow, escaped having an API wrapper until now.
-
-Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
 
 Installation
 ======

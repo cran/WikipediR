@@ -4,10 +4,18 @@
 \alias{user_contributions}
 \title{Retrieve user contributions}
 \usage{
-user_contributions(language = NULL, project = NULL, domain = NULL,
-  username, properties = c("ids", "title", "timestamp", "comment",
-  "parsedcomment", "size", "sizediff", "flags", "tags"), mainspace = FALSE,
-  limit = 50, clean_response = FALSE, ...)
+user_contributions(
+  language = NULL,
+  project = NULL,
+  domain = NULL,
+  username,
+  properties = c("ids", "title", "timestamp", "comment", "parsedcomment", "size",
+    "sizediff", "flags", "tags"),
+  mainspace = FALSE,
+  limit = 50,
+  clean_response = FALSE,
+  ...
+)
 }
 \arguments{
 \item{language}{The language code of the project you wish to query,
@@ -62,4 +70,3 @@ rw_contribs <- user_contributions(domain = "rationalwiki.org", username = "David
 \code{\link{user_information}} for information about a specific user (or group of users),
 and \code{recent_changes} for non-user-specific recent actions.
 }
-
