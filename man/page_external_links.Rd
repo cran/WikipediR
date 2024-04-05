@@ -41,10 +41,12 @@ page_external_links, when provided with a page title, retrieves external wikilin
 current revision of that page.
 }
 \examples{
+\dontrun{
 #Links
 external_links <- page_external_links("en","wikipedia", page = "Aaron Halfaker")
 
 #Protocol-specific links
 external_http_links <- page_external_links("en","wikipedia",
                                           page = "Aaron Halfaker", protocol = "http")
+}
 }

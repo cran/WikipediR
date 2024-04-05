@@ -42,11 +42,13 @@ invalid_revs <- function(parsed_response){
 #'\code{\link{revision_content}} for retrieving the text of specified revisions.
 #'
 #'@examples
+#'\dontrun{
 #'#A page from Wikipedia
 #'wp_content <- random_page("en","wikipedia")
 #'
 #'#A page from the mainspace on Wikipedia
 #'wp_article_content <- random_page("en","wikipedia", namespaces = 0)
+#'}
 #'@export
 random_page <- function(language = NULL, project = NULL, domain = NULL,
                         namespaces = NULL, as_wikitext = FALSE, limit = 1,
@@ -109,6 +111,7 @@ random_page <- function(language = NULL, project = NULL, domain = NULL,
 #'\code{\link{revision_content}} for retrieving the text of specified revisions.
 #'
 #'@examples
+#'\dontrun{
 #'#Content from a Wikimedia project
 #'wp_content <- page_content("en","wikipedia", page_name = "Aaron Halfaker")
 #'
@@ -117,6 +120,7 @@ random_page <- function(language = NULL, project = NULL, domain = NULL,
 #'
 #'#Content from a non-Wikimedia project
 #'rw_content <- page_content(domain = "rationalwiki.org", page_name = "New Age")
+#'}
 #'@export
 page_content <- function(language = NULL, project = NULL, domain = NULL,
                          page_name, page_id = NULL, as_wikitext = FALSE, clean_response = FALSE, ...){
@@ -184,12 +188,13 @@ page_content <- function(language = NULL, project = NULL, domain = NULL,
 #'and \code{\link{page_content}} for the content a specific page currently has.
 #'
 #'@examples
-#'
+#'\dontrun{
 #'#Revision content from a Wikimedia project
 #'wp_content <- revision_content("en","wikipedia", revisions = 552373187)
 #'
 #'#Revision content from a non-Wikimedia project
 #'rw_content <- revision_content(domain = "rationalwiki.org", revisions = 88616)
+#'}
 #'@export
 revision_content <- function(language = NULL, project = NULL, domain = NULL,
                              revisions, properties = c("content","ids","flags","timestamp",
@@ -272,12 +277,13 @@ revision_content <- function(language = NULL, project = NULL, domain = NULL,
 #'\code{\link{revision_content}} for retrieving the text of specific revisions.
 #'
 #'@examples
-#'
+#'\dontrun{
 #'#Wikimedia diff
 #'wp_diff <- revision_diff("en","wikipedia", revisions = 552373187, direction = "next")
 #'
 #'#Non-Wikimedia diff
 #'rw_diff <- revision_diff(domain = "rationalwiki.org", revisions = 88616, direction = "next")
+#'}
 #'@export
 revision_diff <- function(language = NULL, project = NULL, domain = NULL,
                           revisions, properties = c("ids","flags","timestamp","user","userid","size",

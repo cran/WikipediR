@@ -48,12 +48,13 @@ Retrieves the content of a provided list of revisions from whichever MediaWiki i
 querying. Returns as wikimarkup.
 }
 \examples{
-
+\dontrun{
 #Revision content from a Wikimedia project
 wp_content <- revision_content("en","wikipedia", revisions = 552373187)
 
 #Revision content from a non-Wikimedia project
 rw_content <- revision_content(domain = "rationalwiki.org", revisions = 88616)
+}
 }
 \seealso{
 \code{\link{revision_diff}} for diffs between revisions,

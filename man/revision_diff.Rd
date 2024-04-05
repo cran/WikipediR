@@ -65,12 +65,13 @@ diffs yourself.
 }
 
 \examples{
-
+\dontrun{
 #Wikimedia diff
 wp_diff <- revision_diff("en","wikipedia", revisions = 552373187, direction = "next")
 
 #Non-Wikimedia diff
 rw_diff <- revision_diff(domain = "rationalwiki.org", revisions = 88616, direction = "next")
+}
 }
 \seealso{
 \code{\link{page_content}} for retrieving the current content of a specific page, and

@@ -46,11 +46,13 @@ wiki_page retrieves the DOM of a particular MediaWiki page,
 as a HTML blob inside a JSON object.
 }
 \examples{
+\dontrun{
 #A page from Wikipedia
 wp_content <- random_page("en","wikipedia")
 
 #A page from the mainspace on Wikipedia
 wp_article_content <- random_page("en","wikipedia", namespaces = 0)
+}
 }
 \seealso{
 \code{\link{page_content}} for retrieving the content of a specific page,

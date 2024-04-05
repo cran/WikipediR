@@ -44,6 +44,7 @@ wiki_page retrieves the DOM of a particular MediaWiki page,
 as a HTML blob inside a JSON object.
 }
 \examples{
+\dontrun{
 #Content from a Wikimedia project
 wp_content <- page_content("en","wikipedia", page_name = "Aaron Halfaker")
 
@@ -52,6 +53,7 @@ wp_content <- page_content("en", "wikipedia", page_id = 12)
 
 #Content from a non-Wikimedia project
 rw_content <- page_content(domain = "rationalwiki.org", page_name = "New Age")
+}
 }
 \seealso{
 \code{\link{revision_diff}} for retrieving 'diffs' between revisions,

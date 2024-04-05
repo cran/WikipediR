@@ -49,9 +49,11 @@ page_links, when provided with a page title, retrieves internal wikilinks from t
 current revision of that page.
 }
 \examples{
+\dontrun{
 #Links
 links <- page_links("en","wikipedia", page = "Aaron Halfaker")
 
 #Namespace-specific links
 mainspace_links <- page_links("en","wikipedia", page = "Aaron Halfaker", namespaces = 0)
+}
 }

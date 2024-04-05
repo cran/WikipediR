@@ -56,7 +56,7 @@ Retrieves metadata associated with the most recent contributions by a
 specified user.
 }
 \examples{
-
+\dontrun{
 #Retrieve the timestamps of a user's recent contributions to the English-language Wikipedia
 contribs <- user_contributions("en", "wikipedia", username = "Ironholds",
                               properties = "timestamp")
@@ -64,7 +64,7 @@ contribs <- user_contributions("en", "wikipedia", username = "Ironholds",
 #Retrieve the timestamps of a user's recent contributions to a non-Wikimedia wiki.
 rw_contribs <- user_contributions(domain = "rationalwiki.org", username = "David Gerard",
                                  properties = "ids", limit = 1)
-                           
+}                        
 }
 \seealso{
 \code{\link{user_information}} for information about a specific user (or group of users),

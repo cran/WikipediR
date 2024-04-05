@@ -42,7 +42,8 @@ Set to FALSE by default.}
 page_info, when provided with a page title, retrieves metadata about that page.
 }
 \examples{
+\dontrun{
 #Metadata
 page_metadata <- page_info("en","wikipedia", page = "Aaron Halfaker")
-
+}
 }

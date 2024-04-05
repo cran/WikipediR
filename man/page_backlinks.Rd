@@ -55,9 +55,11 @@ any indication of an error.
 }
 
 \examples{
+\dontrun{
 #Backlink
 all_bls <- page_backlinks("en","wikipedia", page = "Aaron Halfaker")
 
 #Namespace-specific backlinks
 mainspace_bls <- page_backlinks("en","wikipedia", page = "Aaron Halfaker", namespaces = 0)
+}
 }

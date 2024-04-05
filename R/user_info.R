@@ -52,7 +52,7 @@ missing_users <- function(parsed_response){
 #'and \code{recent_changes} for non-user-specific recent actions.
 #'
 #'@examples
-#'
+#'\dontrun{
 #'#Retrieve the timestamps of a user's recent contributions to the English-language Wikipedia
 #'contribs <- user_contributions("en", "wikipedia", username = "Ironholds",
 #'                               properties = "timestamp")
@@ -60,7 +60,7 @@ missing_users <- function(parsed_response){
 #'#Retrieve the timestamps of a user's recent contributions to a non-Wikimedia wiki.
 #'rw_contribs <- user_contributions(domain = "rationalwiki.org", username = "David Gerard",
 #'                                  properties = "ids", limit = 1)
-#'                            
+#'}                        
 #'@export
 user_contributions <- function(language = NULL, project = NULL, domain = NULL,
                                username, properties = c("ids", "title", "timestamp",
@@ -149,6 +149,7 @@ user_contributions <- function(language = NULL, project = NULL, domain = NULL,
 #'a particular user.
 #'
 #'@examples
+#'\dontrun{
 #'#Retrieving information from a Wikimedia project
 #'user_info <- user_information("en", "wikipedia", user_names = "David Gerard",
 #'                              properties = "registration")
@@ -156,6 +157,7 @@ user_contributions <- function(language = NULL, project = NULL, domain = NULL,
 #'#Non-Wikimedia projects
 #'user_info <- user_information(domain = "rationalwiki.org", user_names = "David Gerard",
 #'                              properties = "registration")
+#'}
 #'@export
 user_information <- function(language = NULL, project = NULL, domain = NULL,
                              user_names, properties = c("blockinfo","groups","implicitgroups",

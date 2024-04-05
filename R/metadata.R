@@ -36,11 +36,13 @@
 #'any indication of an error.
 #'
 #'@examples
+#'\dontrun{
 #'#Backlink
 #'all_bls <- page_backlinks("en","wikipedia", page = "Aaron Halfaker")
 #'
 #'#Namespace-specific backlinks
 #'mainspace_bls <- page_backlinks("en","wikipedia", page = "Aaron Halfaker", namespaces = 0)
+#'}
 #'@export
 page_backlinks <- function(language = NULL, project = NULL, domain = NULL,
                            page, limit = 50, direction = "ascending", namespaces = NULL,
@@ -96,11 +98,13 @@ page_backlinks <- function(language = NULL, project = NULL, domain = NULL,
 #'@param ... further arguments to pass to httr's GET.
 #'
 #'@examples
+#'\dontrun{
 #'#Links
 #'links <- page_links("en","wikipedia", page = "Aaron Halfaker")
 #'
 #'#Namespace-specific links
 #'mainspace_links <- page_links("en","wikipedia", page = "Aaron Halfaker", namespaces = 0)
+#'}
 #'@export
 page_links <- function(language = NULL, project = NULL, domain = NULL,
                        page, limit = 50, direction = "ascending", namespaces = NULL,
@@ -150,12 +154,14 @@ page_links <- function(language = NULL, project = NULL, domain = NULL,
 #'@param ... further arguments to pass to httr's GET.
 #'
 #'@examples
+#'\dontrun{
 #'#Links
 #'external_links <- page_external_links("en","wikipedia", page = "Aaron Halfaker")
 #'
 #'#Protocol-specific links
 #'external_http_links <- page_external_links("en","wikipedia",
 #'                                           page = "Aaron Halfaker", protocol = "http")
+#'}
 #'@export
 page_external_links <- function(language = NULL, project = NULL, domain = NULL,
                                 page, protocol = NULL, clean_response = FALSE,
@@ -203,9 +209,10 @@ page_external_links <- function(language = NULL, project = NULL, domain = NULL,
 #'@param ... further arguments to pass to httr's GET.
 #'
 #'@examples
+#'\dontrun{
 #'#Metadata
 #'page_metadata <- page_info("en","wikipedia", page = "Aaron Halfaker")
-#'
+#'}
 #'@export
 page_info <- function(language = NULL, project = NULL, domain = NULL, 
                       page, properties = c("protection","talkid","url", "displaytitle"),

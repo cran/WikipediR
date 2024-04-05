@@ -36,12 +36,13 @@
 #'@seealso \code{\link{pages_in_category}} for pages in a specified category.
 #'
 #'@examples
-#'
+#'\dontrun{
 #'#Retrieve the categories for the "New Age" article on en.wiki
 #'cats <- categories_in_page("en", "wikipedia", pages = "New Age")
 #'
 #'#Retrieve the categories for the "New Age" article on rationalwiki.
 #'rw_cats <- categories_in_page(domain = "rationalwiki.org", pages = "New Age")
+#'}
 #'@export
 categories_in_page <- function(language = NULL, project = NULL, domain = NULL,
                                pages, properties = c("sortkey","timestamp","hidden"),
@@ -122,12 +123,13 @@ categories_in_page <- function(language = NULL, project = NULL, domain = NULL,
 #'@seealso \code{\link{categories_in_page}} for finding categories that a specified page is a member of.
 #'
 #'@examples
-#'
+#'\dontrun{
 #'#Retrieve the pages in the "New Age" category on en.wiki
 #'cats <- pages_in_category("en", "wikipedia", categories = "New Age")
 #'
 #'#Retrieve the pages in the "New Age" category on rationalwiki.
 #'rw_cats <- pages_in_category(domain = "rationalwiki.org", categories = "New Age")
+#'}
 #'@export
 pages_in_category <- function(language = NULL, project = NULL, domain = NULL, categories,
                               properties = c("title","ids","sortkey","sortkeyprefix","type","timestamp"),

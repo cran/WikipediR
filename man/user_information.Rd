@@ -69,6 +69,7 @@ populated.
 }
 
 \examples{
+\dontrun{
 #Retrieving information from a Wikimedia project
 user_info <- user_information("en", "wikipedia", user_names = "David Gerard",
                              properties = "registration")
@@ -76,6 +77,7 @@ user_info <- user_information("en", "wikipedia", user_names = "David Gerard",
 #Non-Wikimedia projects
 user_info <- user_information(domain = "rationalwiki.org", user_names = "David Gerard",
                              properties = "registration")
+}
 }
 \seealso{
 \code{\link{user_contributions}} for retrieving recent contributions made by
